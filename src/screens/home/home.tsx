@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../types/route";
 import { Button } from "../../components/button/button";
-
+//ajustando branc's
 const Home: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
