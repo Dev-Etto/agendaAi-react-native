@@ -5,6 +5,7 @@ import icon from "../../constants/icon";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../types/route";
 import { useState } from "react";
+import React from "react";
 
 export const Login = () => {
   const navigate = useNavigation<NavigationProp<RootStackParamList>>();
@@ -26,7 +27,7 @@ export const Login = () => {
       inputData.login === userFake.login &&
       inputData.password === userFake.password
     ) {
-      navigate.navigate("Home");
+      navigate.navigate("Main");
     } else {
       alert("Login ou senha incorretos");
     }
@@ -60,7 +61,7 @@ export const Login = () => {
           />
         </View>
 
-        <Button func={handleUserVerify} text="Acessar" />
+        <Button theme="primary" func={handleUserVerify} text="Acessar" />
       </View>
 
       <View style={styles.footer}>

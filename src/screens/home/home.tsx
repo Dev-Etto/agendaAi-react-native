@@ -1,33 +1,37 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, FlatList } from "react-native";
+import { styles } from "./home.style";
+import { doctors } from "../../constants/data";
+import { Doctor } from "../../components/doctor/doctor";
+import icon from "../../constants/icon";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../types/route";
-import { Button } from "../../components/button/button";
-//ajustando branc's
-const Home: React.FC = () => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+export const Home = () => {
+  const navigate = useNavigation<NavigationProp<RootStackParamList>>();
+
+  const handleNavigate = () => {
+    navigate.navigate("Services");
+  };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Bem-vindo à Home!</Text>
-      <Text style={styles.title}>App em construção</Text>
-      <Button text="Sair" func={() => navigation.navigate("Login")} />
+      <Text style={styles.title}>Agende os seus serviços</Text>
+      <FlatList
+        data={doctors}
+        keyExtractor={(doctor) => doctor.id_doctor.toString()}
+        showsVerticalScrollIndicator={false}
+        renderItem={({ item }) => {
+          return (
+            <Doctor
+              func={handleNavigate}
+              icon={item.icon === "M" ? icon.male : icon.female}
+              name={item.name}
+              specialty={item.specialty}
+            />
+          );
+        }}
+      />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-  },
-});
-
-export default Home;

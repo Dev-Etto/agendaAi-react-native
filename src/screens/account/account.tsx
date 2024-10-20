@@ -4,6 +4,7 @@ import { styles } from "./account.style";
 import icon from "../../constants/icon";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../types/route";
+import React from "react";
 
 export const Account = () => {
   const navigate = useNavigation<NavigationProp<RootStackParamList>>();
@@ -28,7 +29,7 @@ export const Account = () => {
             secureTextEntry={true}
           />
         </View>
-        <Button text="Criar Conta" />
+        <Button theme="primary" text="Criar Conta" />
       </View>
 
       <View style={styles.footer}>
