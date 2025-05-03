@@ -1,6 +1,6 @@
 import {
   Image,
-  ImageSourcePropType,
+  type ImageSourcePropType,
   Text,
   TouchableOpacity,
   View,

@@ -4,8 +4,8 @@ import { styles } from "./home.style";
 import { doctors } from "../../constants/data";
 import { Doctor } from "../../components/doctor/doctor";
 import icon from "../../constants/icon";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { RootStackParamList } from "../../types/route";
+import { type NavigationProp, useNavigation } from "@react-navigation/native";
+import type { RootStackParamList } from "../../types/route";
 
 export const Home = () => {
   const navigate = useNavigation<NavigationProp<RootStackParamList>>();
@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Agende os seus serviços</Text>
+      <Text style={styles.title}>Profisionais disponiveis</Text>
       <FlatList
         data={doctors}
         keyExtractor={(doctor) => doctor.id_doctor.toString()}
