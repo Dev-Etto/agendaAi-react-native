@@ -1,11 +1,14 @@
 # AgendaAi React Native
 
-AgendaAi é um aplicativo desenvolvido em React Native para ajudar os usuários a agendar compromissos e gerenciar serviços de forma eficiente. Este projeto utiliza tecnologias modernas para proporcionar uma experiência de usuário fluida.
+AgendaAi é um aplicativo em desenvolvimento, focado no agendamento de serviços para profissionais da área médica. Este projeto está sendo criado com fins de estudo e aprendizado, utilizando tecnologias modernas para proporcionar uma experiência de usuário fluida.
 
-## Funcionalidades
+## Status do Projeto
+O projeto ainda não está finalizado e encontra-se em fase de desenvolvimento.
+
+## Funcionalidades Planejadas
 - Autenticação de usuários (login e criação de conta).
-- Agendamento de compromissos com profissionais.
-- Visualização e gerenciamento de serviços agendados.
+- Agendamento de compromissos com médicos e outros profissionais da área da saúde.
+- Visualização e gerenciamento de serviços médicos agendados.
 - Interface responsiva e amigável.
 
 ## Tecnologias Utilizadas
